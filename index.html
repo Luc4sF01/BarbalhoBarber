@@ -65,7 +65,7 @@
         </li>
       </ul>
       <a
-        href="#contact"
+        href="#formulario"
         class="bg-[#8B5E3C] hover:bg-[#a56e47] text-white px-[14px] py-[10px] rounded-md shadow-md fonte-poppins uppercase text-[16px] sm:text-[20px] text-center sm:inline"
       >
         Contact Me
@@ -101,7 +101,7 @@
 
       <div class="flex justify-center mt-10 px-4">
         <a
-          href="#contact"
+          href="#formulario"
           class="bg-[#8B5E3C] hover:bg-[#a56e47] text-white px-[14px] py-[10px] rounded-md shadow-md fonte-poppins text-[18px] sm:text-[20px] font-regular text-center"
         >
           Book an Appointment
@@ -172,44 +172,56 @@
           <div
             class="bg-[#D6C8A6] rounded-lg p-6 w-full max-w-md shadow-lg border border-black mx-auto sm:mx-0 place-self-end"
           >
-            <form class="space-y-5 fonte-poppins">
-              <div>
-                <label class="block text-[#171717] font-semibold mb-1"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  placeholder="insert your name here"
-                  class="w-full px-3 py-2 bg-white rounded-md border border-black text-sm"
-                />
-              </div>
-              <div>
-                <label class="block text-[#171717] font-semibold mb-1"
-                  >Location</label
-                >
-                <input
-                  type="text"
-                  placeholder="insert your address here"
-                  class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm"
-                />
-              </div>
-              <div>
-                <label class="block text-[#171717] font-semibold mb-1"
-                  >Date and Time</label
-                >
-                <input
-                  type="text"
-                  placeholder="insert your day and hour of preference"
-                  class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm"
-                />
-              </div>
-              <button
-                type="submit"
-                class="bg-[#E6903D] text-white px-5 py-2 rounded-md shadow hover:bg-[#d47f2b] transition-all w-full font-medium"
-              >
-                Check Availability →
-              </button>
-            </form>
+            <form id="formulario" class="space-y-5 fonte-poppins">
+  <div>
+    <label class="block text-[#171717] font-semibold mb-1">Name</label>
+    <input type="text" id="nome" placeholder="insert your name here"
+      class="w-full px-3 py-2 bg-white rounded-md border border-black text-sm" />
+  </div>
+  <div>
+    <label class="block text-[#171717] font-semibold mb-1">Location</label>
+    <input type="text" id="localizacao" placeholder="insert your address here"
+      class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm" />
+  </div>
+  <div>
+  <label class="block text-[#171717] font-semibold mb-1">Day</label>
+  <select id="dia" class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm">
+    <option value="" disabled selected>Select a day</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+  </select>
+</div>
+
+<div>
+  <label class="block text-[#171717] font-semibold mb-1">Time</label>
+  <select id="hora" class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm">
+    <option value="" disabled selected>Select a time</option>
+    <option value="12:00 PM">12:00 PM</option>
+    <option value="1:00 PM">1:00 PM</option>
+    <option value="2:00 PM">2:00 PM</option>
+    <option value="3:00 PM">3:00 PM</option>
+    <option value="4:00 PM">4:00 PM</option>
+    <option value="5:00 PM">5:00 PM</option>
+    <option value="6:00 PM">6:00 PM</option>
+    <option value="7:00 PM">7:00 PM</option>
+    <option value="8:00 PM">8:00 PM</option>
+
+  </select>
+</div>
+
+  <button
+    type="button"
+    id="enviar"
+    class="bg-[#E6903D] text-white px-5 py-2 rounded-md shadow hover:bg-[#d47f2b] transition-all w-full font-medium"
+  >
+    Check Availability →
+  </button>
+</form>
+
           </div>
         </div>
       </div>
@@ -338,7 +350,7 @@
 
             <div class="mt-10 self-start sm:self-end">
               <a
-                href="#contact"
+                href="#formulario"
                 class="bg-[#E6903D] hover:bg-[#d47f2b] text-white px-6 py-3 rounded-md shadow-[4px_4px_0px_black] inline-block font-medium transition-all"
               >
                 Book an Appointment →
@@ -420,6 +432,32 @@
     </p>
   </div>
 </footer>
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("enviar");
+
+    btn.addEventListener("click", function () {
+      const nome = document.getElementById("nome").value.trim();
+      const localizacao = document.getElementById("localizacao").value.trim();
+      const dia = document.getElementById("dia").value;
+      const hora = document.getElementById("hora").value;
+
+      if (!nome || !localizacao || !dia || !hora) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      const numeroWhatsApp = "447716768048";
+
+      const mensagem = `Hello, my name is ${nome}!\nI would like to book an Appointment with you. \n\n Location: ${localizacao}\n Day: ${dia}\n Hour: ${hora}\n\nThanks!`;
+
+      const link = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+      window.open(link, '_blank');
+    });
+  });
+</script>
 
   </body>
 </html>
