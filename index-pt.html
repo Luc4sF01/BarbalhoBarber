@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber - Alan Barbalho</title>
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .fonte-play { font-family: 'Playfair Display', serif; }
+      .fonte-poppins { font-family: 'Poppins', sans-serif; }
+
+      /* Hide scrollbar */
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-[#171717]">
+
+    <!-- Header animado -->
+    <header
+      data-aos="fade-down"
+      class="flex flex-col sm:flex-row sm:justify-between sm:items-center py-8 bg-[#171717] max-w-[1600px] px-6 sm:px-[140px] mx-auto gap-6 sm:gap-0"
+    >
+      <img src="/img/logo.svg" alt="Logo" class="w-32 sm:w-40 mx-auto sm:mx-0" />
+      <ul class="flex flex-col sm:flex-row gap-4 sm:gap-8 text-white font-medium fonte-poppins uppercase text-[16px] sm:text-[20px] items-center">
+      <li><a href="#services" class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Serviços</a></li>
+      <li><a href="#services" class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Trabalho</a></li>
+      <li><a href="#prices"   class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Preços e Agendamento</a></li>
+      <li><a href="#about"    class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Sobre Mim</a></li>
+      </ul>
+      <a href="#formulario" class="bg-[#8B5E3C] hover:bg-[#a56e47] text-white px-[14px] py-[10px] rounded-md shadow-md fonte-poppins uppercase text-[16px] sm:text-[20px] text-center sm:inline">Agende um horário</a>
+    </header>
+
+  
+    <!-- Botão para página em inglês -->
+    <div class="flex justify-center mt-4">
+  <a
+    class="group relative inline-flex items-center overflow-hidden rounded-full border border-[#8B5E3C] px-6 py-3 text-[#8B5E3C] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8B5E3C] transition-all duration-300"
+    href="index.html"
+  >
+    <span class="absolute -left-10 transition-all duration-300 group-hover:left-4">
+      <svg
+        class="w-5 h-5 rtl:rotate-180 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17 8l4 4m0 0l-4 4m4-4H3"
+        />
+      </svg>
+    </span>
+
+    <span class="text-sm sm:text-base font-medium transition-all duration-300 group-hover:ms-6">
+      View in English
+    </span>
+  </a>
+</div>
+
+
+
+    <!-- Sessão intro animada -->
+    <section data-aos="fade-up" class="pb-[55px] sm:pb-[116px]">
+      <div class="flex justify-center mt-[40px] sm:mt-[91px] px-4">
+      <p class="text-xs sm:text-sm font-bold text-white px-4 py-1 rounded-full bg-gradient-to-l from-[#9A9696] to-[#737373] fonte-play text-center">
+        Aberto das 12:00 às 20:00
+      </p>
+      </div>
+      <h1 class="text-center text-[38px] sm:text-8xl text-[#B6B1B1] fonte-play mt-4 sm:mt-2 font-bold leading-snug sm:leading-[1.1]" data-aos="zoom-in" data-aos-offset="400">
+      Eu não apenas <span class="text-[#8C4307]">Corto Cabelos.</span> Eu Crio<br />
+      <span class="bg-gradient-to-r from-[#8C4307] to-[#D4A373] bg-clip-text text-transparent">Experiências</span>
+      </h1>
+      <p class="text-center fonte-play text-[#B6B1B1] text-[16px] sm:text-[20px] mt-6 sm:mt-8 px-4 sm:px-0" data-aos="fade-up" data-aos-delay="200" data-aos-offset="400">
+      "Desde o momento em que você chega, focamos em precisão, conforto e um serviço personalizado — garantindo que você saia com um visual impecável e cheio de confiança."
+      </p>
+      <div class="flex justify-center mt-10 px-4" data-aos="fade-up" data-aos-delay="400">
+      <a href="#formulario" class="bg-[#8B5E3C] hover:bg-[#a56e47] text-white px-[14px] py-[10px] rounded-md shadow-md fonte-poppins text-[18px] sm:text-[20px] font-regular text-center">
+        Agende um Horário
+      </a>
+      </div>
+      <div class="flex flex-wrap justify-center mt-20 sm:mt-28 gap-4 px-4" data-aos="fade-up" data-aos-delay="600">
+      <img src="/img/foto-intro-1.svg" alt="" class="w-[160px] sm:w-auto" />
+      <img src="/img/foto-intro-2.svg" alt="" class="w-[160px] sm:w-auto" />
+      <img src="/img/foto-intro-3.svg" alt="" class="w-[160px] sm:w-auto" />
+      <img src="/img/foto-intro-4.svg" alt="" class="w-[160px] sm:w-auto" />
+      </div>
+    </section>
+
+    <!-- Sessão Services animada -->
+    <section data-aos="fade-up" class="bg-[#49403C] pt-[67px] pb-[60px] sm:pb-[120px]" id="services">
+      <div class="max-w-[1600px] px-6 sm:px-[140px] mx-auto">
+      <h1 class="uppercase fonte-play text-[36px] sm:text-[64px] text-white text-center sm:text-left">SERVIÇOS ALÉM DAS EXPECTATIVAS</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 mt-[40px] sm:mt-[60px] gap-10">
+        <div data-aos="fade-right" data-aos-delay="200">
+        <p class="fonte-play text-lg sm:text-2xl text-white text-center sm:text-left">
+          Nossa barbearia foi criada para homens que valorizam estilo, conforto e um serviço impecável. Aqui, você encontrará qualidade, pontualidade e discrição — para que você sempre saia com um visual impecável.
+        </p>
+        <div class="pt-[40px] sm:pt-[60px]">
+          <ul class="space-y-[18px] text-white text-sm fonte-play">
+          <li class="flex items-center gap-3"><span class="w-3 h-3 bg-[#E6903D] rounded-full inline-block"></span>Agendamento fácil através do formulário</li>
+          <li class="flex items-center gap-3"><span class="w-3 h-3 bg-[#E6903D] rounded-full inline-block"></span>Cortes modernos e estilosos</li>
+          <li class="flex items-center gap-3"><span class="w-3 h-3 bg-[#E6903D] rounded-full inline-block"></span>Cortes no conforto da sua casa</li>
+          <li class="flex items-center gap-3"><span class="w-3 h-3 bg-[#E6903D] rounded-full inline-block"></span>Segunda a sábado – 12:00 PM - 8:00 PM</li>
+          </ul>
+        </div>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="400" data-aos-offset="400" class="bg-[#D6C8A6] rounded-lg p-6 w-full max-w-md shadow-lg border border-black mx-auto sm:mx-0 place-self-end">
+        <form id="formulario" class="space-y-5 fonte-poppins">
+          <div><label class="block text-[#171717] font-semibold mb-1">Nome</label><input type="text" id="nome" placeholder="insira seu nome aqui" class="w-full px-3 py-2 bg-white rounded-md border border-black text-sm"/></div>
+          <div><label class="block text-[#171717] font-semibold mb-1">Localização</label><input type="text" id="localizacao" placeholder="insira seu endereço aqui" class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm"/></div>
+          <div><label class="block text-[#171717] font-semibold mb-1">Dia</label><select id="dia" class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm"><option value="" disabled selected>Selecione um dia</option><option>Segunda-feira</option><option>Terça-feira</option><option>Quarta-feira</option><option>Quinta-feira</option><option>Sexta-feira</option><option>Sábado</option></select></div>
+          <div><label class="block text-[#171717] font-semibold mb-1">Horário</label><select id="hora" class="w-full px-3 py-2 rounded-md border bg-white border-black text-sm"><option value="" disabled selected>Selecione um horário</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option></select></div>
+          <button type="button" id="enviar" class="bg-[#E6903D] text-white px-5 py-2 rounded-md shadow hover:bg-[#d47f2b] transition-all w-full font-medium">Verificar Disponibilidade →</button>
+        </form>
+        </div>
+      </div>
+      </div>
+    </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sessão de Depoimentos e Preços -->
+    <section id="prices" class="bg-gradient-to-b from-[#49403C] to-[#EBE1CC] pt-[120px] pb-24" data-aos="fade-up" data-aos-duration="800" data-aos-offset="400">
+      <div class="max-w-[1600px] px-6 sm:px-[140px] mx-auto">
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <div class="lg:w-1/2" data-aos="fade-right" data-aos-delay="200">
+        <h1 class="text-white fonte-play uppercase text-5xl sm:text-7xl">DESCUBRA <br />MEU TRABALHO</h1>
+        <p class="fonte-play text-[18px] sm:text-[20px] text-white mt-6">
+          Como um <span class="text-[#E3873D]">barbeiro experiente</span>, sou dedicado a oferecer precisão e estilo. Estou sempre atualizado com as últimas tendências e técnicas para garantir que você sempre saia <span class="text-[#E3873D]">com um visual impecável e confiante</span>.
+        </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" data-aos="fade-left" data-aos-offset="400" data-aos-delay="400">
+        <iframe src="https://www.instagram.com/p/DJMA2Aoqvh8/embed" class="rounded-xl w-full h-[400px]" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        <iframe src="https://www.instagram.com/p/DJL_0mAqRIP/embed" class="rounded-xl w-full h-[400px]" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        <iframe src="https://www.instagram.com/p/CTxT7NoBKjR/embed" class="rounded-xl w-full h-[400px]" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+      </div>
+      </div>
+
+      <div class="max-w-[1400px] px-6 sm:px-[140px] mx-auto mt-[178px]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 sm:gap-[216px] items-start">
+        <div class="relative">
+        <div id="testimonials" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar gap-4">
+          <div class="testimonial snap-center flex-shrink-0 w-full bg-[#E6903D] text-black p-8 sm:p-10 rounded-xl font-poppins text-[20px] h-[460px] flex flex-col justify-between">
+          <p class="italic text-[20px] sm:text-base leading-relaxed fonte-poppins">
+            “Corto meu cabelo com o Alan há mais de dois anos e sempre fico impressionado. Ele é amigável, profissional e sabe exatamente qual estilo funciona melhor para mim. Cada visita é uma ótima experiência!”
+          </p>
+          <p class="font-semibold italic mt-4">Jhon D.</p>
+          </div>
+          <div class="testimonial snap-center flex-shrink-0 w-full bg-[#E6903D] text-black p-8 sm:p-10 rounded-xl font-poppins text-[20px] h-[460px] flex flex-col justify-between">
+          <p class="italic text-[20px] sm:text-base leading-relaxed fonte-poppins">
+            “Os cortes do Alan são sempre de primeira! Ele ouviu atentamente o que eu queria e entregou além das minhas expectativas. Sempre saio me sentindo confiante e renovado.”
+          </p>
+          <p class="font-semibold italic mt-4">Emily R.</p>
+          </div>
+          <div class="testimonial snap-center flex-shrink-0 w-full bg-[#E6903D] text-black p-8 sm:p-10 rounded-xl font-poppins text-[20px] h-[460px] flex flex-col justify-between">
+          <p class="italic text-[20px] sm:text-base leading-relaxed fonte-poppins">
+            “Experiência incrível todas as vezes! O ambiente é relaxante e o corte de cabelo é sempre perfeito. Alan realmente dedica tempo para garantir que cada detalhe esteja certo.”
+          </p>
+          <p class="font-semibold italic mt-4">Alex P.</p>
+          </div>
+        </div>
+        <div id="testimonials-nav" class="flex justify-center mt-4 space-x-2"></div>
+        <div class="absolute inset-y-1/2 right-0 hidden sm:flex items-center pr-2 space-x-2">
+          <button id="prev" class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center shadow">←</button>
+          <button id="next" class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center shadow">→</button>
+        </div>
+        </div>
+
+        <div class="w-full flex flex-col justify-between" data-aos="zoom-in-up" data-aos-offset="400" data-aos-delay="400">
+        <div>
+          <h2 class="text-3xl sm:text-[64px] fonte-play text-[#171717] mb-5 sm:mb-20">MEUS PREÇOS</h2>
+          <ul class="space-y-6 text-[#171717] text-base fonte-play font-bold sm:text-lg">
+          <li class="flex justify-between border-b border-[#171717] pb-2"><span>CORTE DE CABELO</span><span>10,00 £</span></li>
+          <li class="flex justify-between border-b border-[#171717] pb-2"><span>BARBA</span><span>15,00 £</span></li>
+          <li class="flex justify-between border-b border-[#171717] pb-2"><span>CORTE + BARBA</span><span>25,00 £</span></li>
+          <li class="flex justify-between border-b border-[#171717] pb-2"><span>APARAR BARBA</span><span>20,00 £</span></li>
+          </ul>
+        </div>
+        <div class="mt-10 self-start sm:self-end">
+          <a href="#formulario" class="bg-[#E6903D] hover:bg-[#d47f2b] text-white px-6 py-3 rounded-md shadow-[4px_4px_0px_black] inline-block font-medium transition-all">Agende um Horário →</a>
+        </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Sessão Sobre Mim -->
+    <section class="bg-gradient-to-b from-[#EBE1CC] to-[#49403C] py-32">
+      <h1 class="text-center text-7xl sm:text-7xl text-[#171717] fonte-play">SOBRE MIM</h1>
+      <div class="flex flex-col-reverse sm:grid sm:grid-cols-2 max-w-[1600px] px-6 sm:px-[140px] mx-auto pt-[120px] gap-[120px]" data-aos="zoom-in-up" data-aos-offset="400" data-aos-delay="400">
+      <div><p class="text-balance fonte-poppins text-[28px] font-bold mt-20 text-center">Olá, eu sou Alan — um barbeiro brasileiro baseado em Londres com <span class="text-white">mais de 10 anos</span> de experiência. Sou apaixonado por ajudar homens a se sentirem confiantes e estilosos através de cortes de cabelo modernos e precisos, personalizados para cada cliente.</p></div>
+      <div data-aos="fade-left" data-aos-offset="400" data-aos-delay="400"><img src="/img/foto-sobre.svg" alt="" /></div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-[#171717] text-[#B6B1B1] py-16">
+      <div class="max-w-[1600px] px-6 sm:px-[140px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 fonte-play text-sm sm:text-base">
+      <div><h2 class="text-white text-lg mb-4">Sobre</h2><p>Alan é um barbeiro brasileiro baseado em Londres, conhecido por sua precisão, serviço personalizado e cortes modernos. Mais de 10 anos de experiência criando confiança através do estilo.</p></div>
+      <div><h2 class="text-white text-lg mb-4">Links Rápidos</h2><ul class="space-y-2"><li><a href="#services" class="hover:text-white transition">Serviços</a></li><li><a href="#prices" class="hover:text-white transition">Preços e Agendamento</a></li><li><a href="#about" class="hover:text-white transition">Sobre Mim</a></li><li><a href="#contact" class="hover:text-white transition">Contato</a></li></ul></div>
+      <div><h2 class="text-white text-lg mb-4">Contato</h2><p>📍 Camden Town, Londres</p><p>📞 +44 1234 567890</p><p>🇬🇧 Inglês / 🇧🇷 Português</p></div>
+      </div>
+      <div class="mt-12 text-center text-xs text-[#999] px-6">
+      <p>© 2025 Alan Barbalho — Alguns direitos reservados.</p>
+      <p class="mt-2">Desenvolvido por <a href="https://lucasfsl.com.br" target="_blank" class="text-[#E6903D] hover:underline">Lucas Filipe</a></p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({ duration: 800, once: true });
+
+        const container = document.getElementById("testimonials");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        const testimonials = Array.from(container.querySelectorAll(".testimonial"));
+        const nav = document.getElementById("testimonials-nav");
+        let currentIndex = 0;
+
+        testimonials.forEach(() => {
+          const dot = document.createElement("span");
+          dot.className = "w-2 h-2 rounded-full bg-gray-500";
+          nav.appendChild(dot);
+        });
+        update();
+
+        function update() {
+          nav.querySelectorAll("span").forEach((dot, idx) => {
+            dot.classList.toggle("bg-white", idx === currentIndex);
+            dot.classList.toggle("bg-gray-500", idx !== currentIndex);
+          });
+        }
+
+        let scrollTimeout;
+        container.addEventListener("scroll", () => {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            currentIndex = Math.round(container.scrollLeft / container.clientWidth);
+            update();
+          }, 100);
+        });
+
+        prev.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            container.scrollTo({ left: currentIndex * container.clientWidth, behavior: "smooth" });
+            update();
+          }
+        });
+        next.addEventListener("click", () => {
+          if (currentIndex < testimonials.length - 1) {
+            currentIndex++;
+            container.scrollTo({ left: currentIndex * container.clientWidth, behavior: "smooth" });
+            update();
+          }
+        });
+
+        // WhatsApp form
+        document.getElementById("enviar").addEventListener("click", () => {
+          const nome = document.getElementById("nome").value.trim();
+          const localizacao = document.getElementById("localizacao").value.trim();
+          const dia = document.getElementById("dia").value;
+          const hora = document.getElementById("hora").value;
+          if (!nome || !localizacao || !dia || !hora) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+          }
+          const numeroWhatsApp = "447716768048";
+          const mensagem = `Hello, my name is ${nome}!\nI would like to book an Appointment with you.\n\nLocation: ${localizacao}\nDay: ${dia}\nHour: ${hora}\n\nThanks!`;
+          window.open(`https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`, "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>
